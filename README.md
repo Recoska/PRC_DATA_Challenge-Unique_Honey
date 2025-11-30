@@ -49,6 +49,15 @@ ERA5 Weather Data:
 
 ## EDA
 
+In the EDA folder scripts used for assessing the data is included. Here are the files listed and what plots they show:
+- fuel_train.ipynb = Assessing different fuel segments and also as fuel per seconds
+- fuel_analyze.ipynb = takes processed data and assesses fuel consumption based on typecode or the flightphase
+- flightlist_train.ipynb = is a high level analysis of the training dataset
+- compare_sub_files.ipynb = compares the training files with the submission files and gives relevant plots
+- get_flights = gets all flights and gives relevant plots for analyzing them
+
+Based on these plots some restrictions are done on data generation and some cleaning.
+
 
 
 ## Data Generation
