@@ -55,6 +55,8 @@ In the EDA folder scripts used for assessing the data is included. Here are the 
 - flightlist_train.ipynb = is a high level analysis of the training dataset
 - compare_sub_files.ipynb = compares the training files with the submission files and gives relevant plots
 - get_flights = gets all flights and gives relevant plots for analyzing them
+- fuel_compare.ipynb = additional fuel plots
+- analyze_datasets.ipynb = dividing the datasets into acars and adsb and plotting
 
 Based on these plots some restrictions are done on data generation and some cleaning.
 
