@@ -10,6 +10,7 @@
 
 - [Introduction](#introduction)
 - [Additional Data](#additional-data)
+- [EDA](#eda)
 - [Data Generation](#data-generation)
 - [Model Training](#model-training)
 
@@ -19,51 +20,48 @@
 
 ## Introduction
 
-This is the repository for the PRC Data Challenge 2025 and includes the additional data and code for generating the final data and the ML model needed and used for the fuel consumption prediction for reproducing the results. In Additional Data all openly available data is included and explained. We have basically two main processes. The first process is how the final dataset for predicting is generated, see Data Generation and how the model is trained, see Model Training. Requirements displays all the libraries needed for starting the pipelines. All code is written using .ipynb files - Jupyter notebook.
+This repository contains the additional data and code for the PRC Data Challenge 2025. It includes everything needed to generate the final dataset and to train the machine learning model used for fuel-consumption prediction, enabling full reproducibility of the results.
+
+All openly available external data is included and described in the Additional Data folder. The project consists of two main processes:
+
+Data Generation – how the final dataset used for prediction is created.
+
+Model Training – how the ML model is trained.
+
+The Requirements section lists all libraries needed to run the pipelines. All code is written in Jupyter Notebook (.ipynb) format.
 
 ## Additional Data
 
-A few of the things you can do with GitPoint:
+We used three openly accessable data sources:
 
-* View user activity feed
-* Communicate on your issue and pull request conversations
-* Close or lock issues
-* Apply labels and assignees
-* Review and merge pull requests
-* Create new issues
-* Star, watch and fork repositories
-* Control your unread and participating notifications
-* Easily search for any user or repository
+Aircraft Information:
+https://github.com/atoff/OpenAircraftType/tree/master
+In this repository a dataset is included and the following informations are taken based on the typecode:
+- Wake Turbulence Category. L=Light,M=Medium,H=Heavy,J=Jumbo,S=Super
+- Type of engines. P=Piston,J=JET,T=Turboprop/shaft,R=Rocket,E=Electric
+- Number of engines.
 
-<p align="center">
-  <img src = "http://i.imgur.com/IkSnFRL.png" width=700>
-</p>
+Airport Information:
+https://ourairports.com/data/
+Here we included the type of the airport meaning its size.
 
-<p align="center">
-  <img src = "http://i.imgur.com/0iorG20.png" width=700>
-</p>
+ERA5 Weather Data:
+
+## EDA
+
+
 
 ## Data Generation
 
-Feel free to send us feedback on [Twitter](https://twitter.com/gitpointapp) or [file an issue](https://github.com/gitpoint/git-point/issues/new). Feature requests are always welcome. If you wish to contribute, please take a quick look at the [guidelines](./CONTRIBUTING.md)!
+The data generation process begins with data cleaning, performed using clean_data.ipynb. This script smooths the data, detects certain types of errors, and applies interpolation where necessary. It also creates some intermediate columns that are used later in the workflow but are not included in the final dataset.
 
-If there's anything you'd like to chat about, please feel free to join our [Gitter chat](https://gitter.im/git-point)!
+Data cleaning is applied to all three datasets at the trajectory level: training, submission, and final. After cleaning, the same script proceeds to generate the final dataset. This step must be run separately for the training, submission, and final ranking datasets.
+
+In this phase, a search algorithm identifies the start and end segments of each trajectory used for fuel consumption prediction and extracts the relevant segment. The dataframes_combine step then merges this extracted segment with the additional information required for fuel prediction modeling. Finally, build_final_row constructs the final dataset by generating new features and selecting the most important ones.
 
 
 ## Model Training
 
-- Follow the [React Native Guide](https://facebook.github.io/react-native/docs/getting-started.html) for getting started building a project with native code. **A Mac is required if you wish to develop for iOS.**
-- Clone or download the repo
-- `yarn` to install dependencies
-- `yarn run link` to link react-native dependencies
-- `yarn start:ios` to start the packager and run the app in the iOS simulator (`yarn start:ios:logger` will boot the application with [redux-logger](<https://github.com/evgenyrodionov/redux-logger>))
-- `yarn start:android` to start the packager and run the app in the the Android device/emulator (`yarn start:android:logger` will boot the application with [redux-logger](https://github.com/evgenyrodionov/redux-logger))
 
 
-## Contributors
 
-This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification and is brought to you by these [awesome contributors](./CONTRIBUTORS.md).
-
-## Acknowledgments
-
-Thanks to [JetBrains](https://www.jetbrains.com) for supporting us with a [free Open Source License](https://www.jetbrains.com/buy/opensource).
