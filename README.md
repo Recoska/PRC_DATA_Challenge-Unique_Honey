@@ -57,6 +57,7 @@ In the EDA folder scripts used for assessing the data is included. Here are the 
 - get_flights = gets all flights and gives relevant plots for analyzing them
 - fuel_compare.ipynb = additional fuel plots
 - analyze_datasets.ipynb = dividing the datasets into acars and adsb and plotting
+- EDA for the competition_dataV2.ipynb = additional fuel consumption plots
 
 Based on these plots some restrictions are done on data generation and some cleaning.
 
@@ -64,7 +65,7 @@ Based on these plots some restrictions are done on data generation and some clea
 
 ## Data Generation
 
-The data generation process begins with data cleaning, performed using clean_data.ipynb. This script smooths the data, detects certain types of errors, and applies interpolation where necessary. It also creates some intermediate columns that are used later in the workflow but are not included in the final dataset.
+The data generation process begins with data cleaning, performed using cleaning.ipynb. This script smooths the data, detects certain types of errors, and applies interpolation where necessary. It also creates some intermediate columns that are used later in the workflow but are not included in the final dataset.
 
 Data cleaning is applied to all three datasets at the trajectory level: training, submission, and final. After cleaning, the same script proceeds to generate the final dataset. This step must be run separately for the training, submission, and final ranking datasets.
 
@@ -73,6 +74,6 @@ In this phase, a search algorithm identifies the start and end segments of each 
 
 ## Model Training
 
-
+The training script is called Multi-models for fuel consumption-227(1).ipynb. It contains all the model description and phases. The basic idea is to do a stacking of models and train a meta model for weighing the stacked models to make a final prediction. 
 
 
