@@ -1,7 +1,7 @@
 <h1 align="center"> PRC Data Challenge 2025 </h1> <br>
 <p align="center">
-  <a href="https://ansperformance.eu/study/data-challenge/dc2025/">
-    <img alt="ILS" title="ILS" src="[http://i.imgur.com/VShxJHs.png](https://ansperformance.eu/study/data-challenge/dc2025/media/PRC-Data-challenge-1080x1080.jpg](https://www.ils.uni-stuttgart.de/img/institute/ils-logo-complete-ontop-center-rect-DE-big.svg?__scale=w:720,h:432,cx:0,cy:0,cw:55,ch:33)" width="450">
+  <a href="[https://ansperformance.eu/study/data-challenge/dc2025/](https://www.ils.uni-stuttgart.de/)">
+    <img alt="ILS" title="ILS" src="[[http://i.imgur.com/VShxJHs.png](https://ansperformance.eu/study/data-challenge/dc2025/media/PRC-Data-challenge-1080x1080.jpg](https://www.ils.uni-stuttgart.de/img/institute/ils-logo-complete-ontop-center-rect-DE-big.svg?__scale=w:720,h:432,cx:0,cy:0,cw:55,ch:33)](https://www.ils.uni-stuttgart.de/img/institute/ils-logo-complete-ontop-center-rect-DE-big.svg?__scale=w:720,h:432,cx:0,cy:0,cw:55,ch:33)" width="450">
   </a>
 </p>
 
